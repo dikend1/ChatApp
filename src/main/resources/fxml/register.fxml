@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      alignment="CENTER"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      prefWidth="1437" prefHeight="785"
+      minWidth="1437" minHeight="785"
+      fx:controller="jv.chat.controllers.RegisterController">
+
+    <Label text="Register" style="-fx-font-size: 24px;"/>
+
+    <TextField fx:id="usernameField" promptText="Username" maxWidth="250"/>
+    <PasswordField fx:id="passwordField" promptText="Password" maxWidth="250"/>
+
+    <Button text="Register" onAction="#handleRegister" maxWidth="150"/>
+    <Hyperlink text="Login" onAction="#goToLogin"/>
+
+    <Label fx:id="errorLabel" textFill="red"/>
+</VBox>

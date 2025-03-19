@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="jv.chat.controllers.ChatController"
+            fx:id="borderPane"
+            prefWidth="1437" prefHeight="795"
+            minWidth="1437" minHeight="795"
+            style="-fx-background-color: #ecf0f1;">
+
+
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #2C3E50; -fx-padding: 10;">
+            <Label fx:id="accountName" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <ListView fx:id="contactsList" prefHeight="500"/>
+        </VBox>
+    </left>
+
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Label fx:id="chatHeader" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+            <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="750">
+                <VBox fx:id="chatHistory" spacing="5">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </VBox>
+            </ScrollPane>
+
+
+            <HBox spacing="5" style="-fx-padding: 5;">
+                <TextField fx:id="messageInput" promptText="Type a message..." HBox.hgrow="ALWAYS"/>
+                <Button fx:id="sendButton" text="Send"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
